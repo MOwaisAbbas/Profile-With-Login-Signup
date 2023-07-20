@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile-page</title>
+    <script src="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.7.18/dist/sweetalert2.all.min.js
+    "></script>
+    <link href="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.7.18/dist/sweetalert2.min.css
+    " rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="main-div">
+        
+        <div class="main ">
+            <div class="p-img">
+                <img class="prof-img" src="./images/images.png" alt="Profile Picture">
+                <label class="label-img" for="file-input">
+                    <img class="icon" src="./images/icons8-camera-26.png" alt="Camera icon">
+                </label>
+                <input type="file" id="file-input" >
+            </div>
+            <div class="form">
+                <div class="input-div">
+                    <input type="text" name="username" class="username" required>
+                    <span></span>
+                    <label>Username</label>
+                </div>
+                <div class="input-div">
+                    <input type="email" name="email" class="email" required>
+                    <span></span>
+                    <label>Email</label>
+                </div>
+                <div class="input-div">
+                    <input type="text" name="phone" class="phone" required>
+                    <span></span>
+                    <label>Phone Number</label>
+                </div>
+                <div class="line">
+
+                </div>
+                
+                <button class="update-btn btn">update</button>
+                <button class="logout-btn btn">logout</button>
+                
+            </div>
+            
+        </div>
+
+    </div>
+
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
