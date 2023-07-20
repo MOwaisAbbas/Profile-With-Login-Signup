@@ -7,7 +7,7 @@
 
 .main-div {
     /* opacity: .7; */
-    background: url("images/bg.jpeg") no-repeat;
+    background: url("images/images.jpeg") no-repeat;
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -124,7 +124,7 @@ input:valid~span::before {
 }
 
 .btn:hover {
-    background: url("images/bg.jpeg");
+    background: url("images/images.jpeg");
     background-size: cover;
     color: #fcfcfc;
     cursor: pointer;
@@ -167,37 +167,27 @@ p>a:hover {
 .label-img {
 
     position: absolute;
-    left: 110px;
-    top: 110px;
-
-    width: 30px;
-    height: 30px;
+    left: 115px;
+    top: 120px;
+background: #fff;
+border-radius: 50%;
+    width: 50px;
+    height: 50px;
     pointer-events: all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 input[type="file"] {
     display: none;
 }
 
-.info {
-    border: 1px solid black;
-    width: 90%;
-    height: 20vh;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 5px;
 
-}
-
-.info h2 {
-    color: #2e22ac;
-}
-
-.info p {
-    margin-left: 20px;
-    color: #7432a5;
+.icon{
+    
+    width: 40px;
+    height: 40px;
 }
 
 

@@ -4,7 +4,7 @@ import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/fireb
 import { getStorage, ref } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-storage.js";
 
 const firebaseConfig = {
-    
+   
 };
 
 const app = initializeApp(firebaseConfig);
@@ -16,13 +16,13 @@ const storage = getStorage();
 let regBtn = document.querySelectorAll(".reg-btn")[0];
 let inputs = document.querySelectorAll("input");
 regBtn && regBtn.addEventListener("click", () => {
-
     createUserWithEmailAndPassword(auth, inputs[1].value, inputs[2].value)
         .then(async (userCredential) => {
             try {
 
                 const user = userCredential.user;
                 await setDoc(doc(db, "users", user.uid), {
+
                     username: inputs[0].value,
                     email: inputs[1].value
                 });
@@ -83,6 +83,7 @@ logOutBtn && logOutBtn.addEventListener("click", () => {
             title: "Log out"
         })
         window.location.href = "index.html"
+        localStorage.clear()
     }).catch((error) => {
         Swal.fire({
             icon: 'error',
@@ -104,7 +105,10 @@ const printDetails = async (id) => {
         console.log("Document data:", docSnap.data());
         inputs[1].value = docSnap.data().username;
         inputs[2].value = docSnap.data().email;
-        inputs[3].value = docSnap.data().phone;
+        if(docSnap.data().phone){
+
+            inputs[3].value = docSnap.data().phone;
+        }
 
        
 
@@ -133,6 +137,8 @@ onAuthStateChanged(auth, (user) => {
 });
 let updateBtn = document.querySelectorAll(".update-btn")[0];
 updateBtn && updateBtn.addEventListener("click", async () => {
+console.log(inputs)
+
     let userId = localStorage.getItem("uid")
     console.log(userId)
     await setDoc(doc(db, "users", userId), {
@@ -140,7 +146,10 @@ updateBtn && updateBtn.addEventListener("click", async () => {
         email:inputs[2].value ,
         phone: inputs[3].value
     });
-
+    Swal.fire({
+        icon: 'sucess',
+        title: 'User Updated'
+    })
 })
 
 let pasImg = document.querySelectorAll("#pas-img")[0];

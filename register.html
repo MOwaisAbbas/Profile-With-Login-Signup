@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Profile-page</title>
+    <title>Login-page</title>
     <script src="
     https://cdn.jsdelivr.net/npm/sweetalert2@11.7.18/dist/sweetalert2.all.min.js
     "></script>
@@ -17,15 +17,9 @@
 <body>
 
     <div class="main-div">
-        
-        <div class="main ">
-            <div class="p-img">
-                <img class="prof-img" src="./images/download.png" alt="Profile Picture">
-                <label class="label-img" for="file-input">
-                    <img class="icon" src="./images/icons8-camera-50.png" alt="Camera icon">
-                </label>
-                <input type="file" id="file-input" >
-            </div>
+    
+        <div class="main">
+            <h1>Create your Account</h1>
             <div class="form">
                 <div class="input-div">
                     <input type="text" name="username" class="username" required>
@@ -38,21 +32,18 @@
                     <label>Email</label>
                 </div>
                 <div class="input-div">
-                    <input type="text" name="phone" class="phone" required>
+                    <input type="password" name="password" class="password" required>
                     <span></span>
-                    <label>Phone Number</label>
+                    <label>Password</label>
+                    <img id="pas-img" src="./images/icons8-eye-24.png" alt="">
                 </div>
+                <button class="reg-btn btn">register</button>
                 <div class="line">
 
                 </div>
-                
-                <button class="update-btn btn">update</button>
-                <button class="logout-btn btn">logout</button>
-                
+                <p>Already have an account? <a href="./index.html">login here</a> </p>
             </div>
-            
         </div>
-
     </div>
 
 
